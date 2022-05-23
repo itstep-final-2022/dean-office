@@ -19,9 +19,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from rest_framework import routers
+from api.views import StudentsView
 
 router = routers.DefaultRouter()
-router.register('', None, basename='students_view')
+router.register('', StudentsView, basename='students_view')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
